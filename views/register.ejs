@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <link rel='stylesheet' href='/javascripts/bower_components/bootstrap/dist/css/bootstrap.css'/>
+    <link rel='stylesheet' href='/stylesheets/signin.css'/>
+</head>
+<body>
+<div class="container">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <div class="panel panel-primary">
+
+            <form class="form-signin" action="/register" method="post">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Регистрация</h3>
+                </div>
+                <!--Логин-->
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="text" id="inputEmail" class="form-control" placeholder="Email address" type="text" name="username" required autofocus>
+                <!--Пароль-->
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" type="password" name="password" required>
+                <!--Роль-->
+                <label for="inputRole" class="sr-only">Role</label>
+                <!--<input type="text" id="inputRole" class="form-control" placeholder="Role" type="text" name="role" required>-->
+                <select name="role" class="form-control" id="inputRole" >
+                    <option value="administrator">Администратор</option>
+                    <option value="manager">Менеджер</option>
+                    <option value="mechanic">Механик</option>
+                </select>
+                <!--Бокс-->
+                <label for="inputBoxid" class="sr-only">Box</label>
+                <!--<input type="text" id="inputBoxid" class="form-control" placeholder="Boxid" type="text" name="boxid" required>-->
+                <select name="boxid" class="form-control" id="inputBox">
+                    <option value="all">Все</option>
+                    <option value="a">Бокс №1</option>
+                    <option value="b">Бокс №2</option>
+                    <option value="c">Бокс №3</option>
+                    <option value="d">Бокс №4</option>
+                    <option value="e">Бокс №5</option>
+                </select>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Записать</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <div class="col-sm-4"></div>
+</div> <!-- /container -->
+
+
+</body>
+</html>

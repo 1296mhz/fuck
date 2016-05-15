@@ -1,0 +1,58 @@
+[
+    {
+        "id": "",
+        "resourceId": "b11",
+        "start": "2016-04-29T16:00:00",
+        "end": "2016-04-29T17:00:00",
+        "customer_car_vin": "GFYETFJSKR7829384",
+        "customer_car_name": "Bugatti",
+        "customer_car_mileage": "900000000",
+        "customer_car_gv_number": "а444аа",
+        "title": "Заказ номер: 120",
+        "event_name": "Замена блока предохранителей",
+        "customer_name": "Хуесос Владимир Федорович",
+        "mechanic": "Петров Максим"
+    },
+    {
+        "id": "",
+        "resourceId": "b11",
+        "start": "2016-04-29T16:00:00",
+        "end": "2016-04-29T17:00:00",
+        "customer_car_vin": "GFYETFJSKR7829384",
+        "customer_car_name": "Bugatti",
+        "customer_car_mileage": "900000000",
+        "customer_car_gv_number": "а444аа",
+        "title": "Заказ номер: 121",
+        "event_name": "Замена блока предохранителей",
+        "customer_name": "Хуесос Владимир Федорович",
+        "mechanic": "Петров Максим"
+    },
+    {
+        "id": "",
+        "resourceId": "b68",
+        "start": "2016-04-29T13:00:00",
+        "end": "2016-04-29T14:00:00",
+        "customer_car_vin": "HFDYEUFHDBSNMFHY7",
+        "customer_car_name": "Rootr",
+        "customer_car_mileage": "545454",
+        "customer_car_gv_number": "43432",
+        "title": "Заказ номер: 122",
+        "event_name": "Срез болтов",
+        "customer_name": "Быдло Быдло Хуев",
+        "mechanic": "Молчанов Павел Юрьевич"
+    },
+    {
+        "id": "",
+        "resourceId": "b11",
+        "start": "2016-04-29T13:00:00",
+        "end": "2016-04-29T14:00:00",
+        "customer_car_vin": "HFDYEUFHDBSNMFHY7",
+        "customer_car_name": "Rootr",
+        "customer_car_mileage": "545454",
+        "customer_car_gv_number": "43432",
+        "title": "Заказ номер: 123",
+        "event_name": "Замена блока предохранителей",
+        "customer_name": "Быдло Быдло Хуев",
+        "mechanic": "vugluskr"
+    }
+]

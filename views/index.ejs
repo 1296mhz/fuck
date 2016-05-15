@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/javascripts/bower_components/bootstrap/dist/css/bootstrap.css'/>
+    <link rel='stylesheet' href='/javascripts/bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'/>
+    <link rel='stylesheet' href='/javascripts/bower_components/fullcalendar/dist/fullcalendar.print.css'
+          rel='stylesheet' media='print'/>
+    <link rel='stylesheet' href='/javascripts/bower_components/fullcalendar-scheduler/dist/scheduler.css'
+          rel='stylesheet'/>
+    <link rel='stylesheet' href='/stylesheets/dashboard.css'
+          rel='stylesheet'/>
+    <link rel='stylesheet' href='/stylesheets/style.css'
+          rel='stylesheet'/>
+    <script src='/javascripts/bower_components/jquery/dist/jquery.js'></script>
+    <script src='/javascripts/bower_components/moment/moment.js'></script>
+    <script src='/javascripts/bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+    <script src='/javascripts/bower_components/fullcalendar-scheduler/dist/scheduler.min.js'></script>
+    <script src='/javascripts/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+    <!--<script src='/javascripts/local/leftmenu.js'></script>-->
+    <script src='/javascripts/local/calendar.js'></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><%= title %></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <% if (!user) { %>
+                <li><a href="/login">Вход</a></li>
+                <% } %>
+                <% if (user) { %>
+                <li><a>Ваша группа: <%= user.role %></a></li>
+                <li><a>Вы вошли как: <%= user.username %></a></li>
+                <li><a href="/logout">Выход</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<% if (!user) { %>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="alert alert-warning">
+            <strong>Авторизуйтесь</strong>
+        </div>
+    </div>
+</div>
+<% } %>
+
+<% if (user) { %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <% if (user.role === 'administrator') { %>
+                <li class="leftMenu" id="todayLeftMenu"><a href="/register">Создать пользователя<span class="badge"></span></a></li>
+                <%}%>
+                <li class="leftMenu" id="todayLeftMenu"><a href="#">Сегодня <span class="badge">2</span></a></li>
+                <li class="leftMenu" id="weekLeftMenu"><a href="#">Неделя <span class="badge">76</span></a></li>
+                <li class="leftMenu" id="monthLeftMenu"><a href="#">Месяц <span class="badge">276</span></a></li>
+                <li class="leftMenu" id="siteLeftMenu"><a href="#">Сайт <span class="badge">76</span></a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="container-fluid">
+                        <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+</body>
+</html>
