@@ -17,8 +17,11 @@
     "express-session": "^1.13.0",
     "jade": "^1.11.0",
     "mocha": "^2.4.5",
+    "mongoose": "^4.4.17",
     "morgan": "~1.6.1",
+    "passport": "^0.3.2",
     "passport-local-mongoose": "^4.0.0",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.2.0"
   }
 }
